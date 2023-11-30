@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -93,4 +93,45 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+ */
+ body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color:#104e62;
+  color: #ffffff;
+}
+
+
+ header {
+  background-color:#00a9e1; 
+  padding: 20px; 
+  margin: -1%; 
+  height: 35px;
+  display: flex; 
+  align-items: center;
+  
+}
+
+header img {
+  display: flex;
+  width:104px; /* Ancho de la imagen (ajusta según tus necesidades) */
+  height:74px;
+  margin: 0%;
+  margin-right: 4px;
+  margin-top: 15px;
+ 
+}
+h2{
+ 
+  color: #D4AF37 ; 
+  margin-top: 60px;
+  font-size: 1.7rem;
+}
+h2:hover {
+  color: #ab8712;
+  text-shadow: 2px 2px 8px rgb(#075a76;);
+
 }
