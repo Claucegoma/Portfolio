@@ -90,7 +90,9 @@ class RotatingCardsSection extends LitElement {
       <div class="card-section">
         <div class="card">
           <div class="card-inner">
-            <div class="card-face">Tech skills</div>
+            <div class="card-face">Tech skills
+            <img  class="image" src="./assets/tech-skills.png" alt="">
+            </div>
             <div class="card-face-back">
             <ul>
               <li>JavaScript</li>
@@ -129,7 +131,9 @@ class RotatingCardsSection extends LitElement {
         </div>
         <div class="card">
           <div class="card-inner">
-            <div class="card-face">Frameworks</div>
+            <div class="card-face">Frameworks
+            <img  class="image" src="./assets/frameworks.png" alt="">
+            </div>
             <div class="card-face-back">
             <ul>
               <li>Lit</li>
@@ -142,7 +146,9 @@ class RotatingCardsSection extends LitElement {
         </div>
         <div class="card">
           <div class="card-inner">
-            <div class="card-face">Tools</div>
+            <div class="card-face">Tools
+            <img  class="image" src="./assets/tools.png" alt="">
+            </div>
             <div class="card-face-back">
             <ul>
               <li>Git</li>
