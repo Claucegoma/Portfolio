@@ -30,7 +30,7 @@ class DarkModeButton extends LitElement {
   }
 
   render() {
-    return html`<button @click=${this.toggleDarkMode}>${this.darkMode ? '🌞' : '🌛'}</button>`;
+    return html`<button @click=${this.toggleDarkMode}>${this.darkMode ? '🌛' : '🌞'}</button>`;
   }
 
   toggleDarkMode() {

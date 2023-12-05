@@ -11,7 +11,6 @@ class RotatingCardsSection extends LitElement {
 
     .card-section {
       display: grid;
-     /*  grid-template-columns: repeat(2, 1fr); */
       gap: 20px;
       text-align: center;
       justify-content: center;
@@ -37,16 +36,19 @@ class RotatingCardsSection extends LitElement {
     .card {
       position: relative;
       width: 250px;
-      height: 320px;
+      height: 330px;
       margin: 10px;
       perspective: 1000px;
-    }
 
+     
+    }
+  
     .card-inner {
       width: 100%;
       height: 100%;
       transform-style: preserve-3d;
       transition: transform 0.5s;
+    
     }
 
     .card:hover .card-inner {
@@ -60,11 +62,39 @@ class RotatingCardsSection extends LitElement {
       height: 100%;
       backface-visibility: hidden;
       display: flex;
+      flex-wrap:wrap;
       align-items: center;
-      justify-content: center;
-      border: 1px solid #ccc;
+      justify-content: center; 
       box-sizing: border-box;
-    }
+      font-size:1.5rem;
+      border-radius:20px;   
+      border: 7px solid transparent; /* Grosor del borde animado */
+      border-image: linear-gradient(115deg,#075a76, #ab8712, #a767e5, #00a9e1);
+      border-image-slice: 1;
+      animation: border-animation 5s linear infinite;
+}
+
+@keyframes border-animation {
+  0% {
+    border-image-source: linear-gradient(115deg, #075a76, #ab8712, #a767e5, #00a9e1);
+  }
+  25% {
+    border-image-source: linear-gradient(115deg, #00a9e1,#D4AF37 , #075a76, #ab8712, #a767e5);
+  }
+  50% {
+    border-image-source: linear-gradient(115deg, #a767e5, #00a9e1,#D4AF37 , #075a76, #ab8712);
+  }
+  75% {
+    border-image-source: linear-gradient(115deg, #ab8712, #a767e5, #00a9e1,#D4AF37 , #075a76);
+  }
+  100% {
+    border-image-source: linear-gradient(115deg, #075a76, #ab8712, #a767e5, #00a9e1,#D4AF37 );
+  }
+}
+
+ 
+
+
 
     .card-face-back {
       transform: rotateY(180deg);
@@ -76,11 +106,11 @@ class RotatingCardsSection extends LitElement {
   }
 
   li {
-    margin-bottom: 7px; /* Opcional: Agrega espacio entre los elementos de la lista */
+    margin-bottom: 6px; /* Opcional: Agrega espacio entre los elementos de la lista */
   }
   .image{
-    height:150px;
-    width:170px;
+    height:170px;
+    width:200px;
   }
   `;
 
@@ -118,9 +148,6 @@ class RotatingCardsSection extends LitElement {
                 <li>Perseverance</li>
                 <li>Responsibility</li>
                 <li>Punctuality</li>
-                <li>Organization</li>
-                <li>Team Work</li>
-                <li>Agile Methodology</li>
                 <li>Self-Learning</li>
                 <li>Effective Communication</li>
                 <li>Ethic</li>

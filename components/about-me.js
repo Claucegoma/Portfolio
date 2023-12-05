@@ -25,7 +25,7 @@ export class AboutMe extends LitElement {
 
                 h1:hover {
                     color: #ab8712;
-                    /* text-shadow: 2px 2px 8px rgba(255, 255, 255, 1); */
+                  
                   
                 }
 
@@ -38,16 +38,28 @@ export class AboutMe extends LitElement {
 
                 .content {
                     display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+                   /*  grid-template-columns: repeat(2, 1fr); */
                     gap: 20px;
                     text-align: center;
+                    justify-content: center;
                 }
 
                 p {
                     font-size: 1.5rem;
+                
+                }
+                @media screen and (min-width: 300px) {
+                 .content {
+                    grid-template-columns: repeat(1, 1fr); /* Dos columnas en dispositivos de 400px o más */
+                        }
                 }
 
-                @media screen and (min-width: 1400px) {
+                @media screen and (min-width: 600px) {
+                 .content {
+                    grid-template-columns: repeat(2, 1fr); /* Dos columnas en dispositivos de 400px o más */
+                        }
+                }
+                /* @media screen and (min-width: 1400px) {
                     :host {
                         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                     }
@@ -55,7 +67,9 @@ export class AboutMe extends LitElement {
                     .container {
                         grid-column: span 1;
                     }
-                }
+                    
+                } */
+              
 
 
         `
@@ -65,12 +79,14 @@ export class AboutMe extends LitElement {
         return html`
        <div class="container"><i><h1>Cecilia González Mariblanca</h1></i></div>
        <div class ="content">
-        <p>Over the years, i have learned to reinvent myself in different ways,surpassing my own limits, thus
+        <p>Over the years, i have learned to reinvent myself in different ways, surpassing my own limits, thus
             embracing fear as a preamble to success.<br>
             Thanks to technology, i have found the opportunity to have constant
-            professional growth. 
+            professional growth, and to be a lifelong learner in a world where everything evolves very quickly.
+            <br>
+
             Perseverance lives with me day by day. When something
-            motivates and excites me, I put my mind and heart into it, and that has
+            motivates and excites me, i put my mind and heart into it, and that has
             always been my formula for success.
         </p>
         <img src= "./assets/yo-removebg-preview.png" alt ="" />
