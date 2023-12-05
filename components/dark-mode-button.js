@@ -8,15 +8,57 @@ class DarkModeButton extends LitElement {
       padding: 8px 16px;
       cursor: pointer;
       border-radius: 50px;
-      display: flex;
-      margin-left: 850px;
       border: 0;
-      margin-top: 20px;
+      margin: 20px; 
+      align-self: center; 
     }
+
     button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-}
+      transform: translateY(-3px);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+  
+   
+    @media screen and (min-width: 500px) {
+      button {
+        margin-left: 200px; 
+     
+      }
+    }
+    
+    @media screen and (min-width: 710px) {
+      button {
+        margin-left: 400px; 
+     
+      }
+    }
+    
+    @media screen and (min-width: 820px) {
+      button {
+        margin-left: 500px; 
+     
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      button {
+        margin-left: 500px; 
+     
+      }
+    }
+    @media screen and (min-width: 1000px) {
+      button {
+        margin-left: 700px; 
+     
+      }
+    }
+    @media screen and (min-width: 1100px) {
+      button {
+        margin-left: 850px; 
+     
+      }
+    }
 
   `;
 

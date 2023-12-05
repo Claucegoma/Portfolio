@@ -30,15 +30,14 @@ export class AboutMe extends LitElement {
                 }
 
                 img {
-                    width: 50%;
+                    width: 40%;
                     height: auto;
-                    margin: 0 auto;
+                    margin: auto;
                     border-radius:15px;
                 }
 
                 .content {
                     display: grid;
-                   /*  grid-template-columns: repeat(2, 1fr); */
                     gap: 20px;
                     text-align: center;
                     justify-content: center;
@@ -50,27 +49,15 @@ export class AboutMe extends LitElement {
                 }
                 @media screen and (min-width: 300px) {
                  .content {
-                    grid-template-columns: repeat(1, 1fr); /* Dos columnas en dispositivos de 400px o más */
+                    grid-template-columns: repeat(1, 1fr); 
                         }
                 }
 
-                @media screen and (min-width: 600px) {
+                @media screen and (min-width: 700px) {
                  .content {
-                    grid-template-columns: repeat(2, 1fr); /* Dos columnas en dispositivos de 400px o más */
+                    grid-template-columns: repeat(2, 1fr); 
                         }
-                }
-                /* @media screen and (min-width: 1400px) {
-                    :host {
-                        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                    }
-
-                    .container {
-                        grid-column: span 1;
-                    }
-                    
-                } */
-              
-
+                }            
 
         `
     ];

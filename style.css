@@ -97,6 +97,7 @@ button:focus-visible {
  */
  body {
   transition: background-color 0.3s, color 0.3s;
+  margin: 0;
 }
 
 body.dark-mode {
@@ -105,14 +106,20 @@ body.dark-mode {
 }
 
 
- header {
-  background-color:#00a9e1; 
-  padding: 20px; 
-  margin: -1%; 
-  height: 35px;
-  display: flex; 
+header {
+  background-color: #00a9e1;
+  padding: 20px;
+  margin: 0;
+  height: 90px;
+  width: 100%;
+  display: flex;
   align-items: center;
-  
+  box-sizing: border-box;
+}
+@media screen and (max-width: 570px) {
+  header {
+    height: 110px;
+  }
 }
 
 header img {
@@ -127,7 +134,7 @@ header img {
 h2{
  
   color: #D4AF37 ; 
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 1.9rem;
 }
 h2:hover {

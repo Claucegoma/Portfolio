@@ -15,13 +15,18 @@ class RotatingCardsSection extends LitElement {
       text-align: center;
       justify-content: center;
     }
-    @media (min-width: 300px) {
+   /*  @media (min-width: 300px) {
       .card-section {
         grid-template-columns: repeat(4, 1fr);
       }
-    }
+    } */
 
-     @media (min-width: 600px) {
+    @media (min-width: 450px) {
+      .card-section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+     @media (min-width: 700px) {
       .card-section {
         grid-template-columns: repeat(3, 1fr);
       }
