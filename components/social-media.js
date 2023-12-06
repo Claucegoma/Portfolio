@@ -312,11 +312,12 @@ export class SocialMedia extends LitElement {
         window.location.href = 'https://github.com/Claucegoma';
       }
       downloadCV() {
-        const cvUrl = './cv.pdf';  // Reemplaza con la URL de tu CV en formato descargable (PDF, por ejemplo).
+        const cvUrl = './cv.pdf';
         const link = document.createElement('a');
         link.href = cvUrl;
-        link.download = 'cv.pdf';  // Nombre de archivo predeterminado para la descarga.
+        link.download = 'cv.pdf';
         link.click();
       }
+      
 }
 customElements.define('social-media', SocialMedia);

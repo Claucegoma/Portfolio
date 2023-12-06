@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import './popoup-window';
 
 export class MyProjects extends LitElement {
     static styles = [
@@ -95,16 +96,28 @@ export class MyProjects extends LitElement {
                         }
         `
     ];
+    mostrarVentanaEmergente() {
+        const popupWindow = document.createElement('popup-window');
+        document.body.appendChild(popupWindow);
+      }
+    
 
     render() {
         return html`
         <i><h2>My projects</h2></i>
         <div class="projects-section">
-        <button>Burger Queen</button>
+        <button @click=${this.mostrarVentanaEmergente}>Burger Queen</button>
+       
+
+        <popup-element id="popup"></popup-element>
         <button>MDLinks</button>
         <button>Social Network</button>
         </div>
         `;
     }
+   
+    
+    
+    
 }
 customElements.define('my-projects', MyProjects);
