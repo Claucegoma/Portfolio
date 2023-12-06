@@ -2,11 +2,16 @@ import { LitElement, html, css } from 'lit';
 
 class RotatingCardsSection extends LitElement {
   static styles = css`
-    h1 {
+    h2 {
       color: #D4AF37;
       margin-top: 50px;
       font-size: 2.5rem;
       margin-left:70px;
+    }
+    h2:hover {
+      color: #ab8712;
+                  
+                  
     }
 
     .card-section {
@@ -15,11 +20,7 @@ class RotatingCardsSection extends LitElement {
       text-align: center;
       justify-content: center;
     }
-   /*  @media (min-width: 300px) {
-      .card-section {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    } */
+ 
 
     @media (min-width: 450px) {
       .card-section {
@@ -121,7 +122,7 @@ class RotatingCardsSection extends LitElement {
 
   render() {
     return html`
-      <i><h1>Skills</h1></i>
+      <i><h2>Skills</h2></i>
       <div class="card-section">
         <div class="card">
           <div class="card-inner">

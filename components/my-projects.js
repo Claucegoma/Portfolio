@@ -14,6 +14,31 @@ export class MyProjects extends LitElement {
                   
                   
                 }
+                .projects-section {
+                    display: grid;
+                    gap: 20px;
+                    text-align: center;
+                    justify-content: center;
+                    padding:40px;
+                    }
+                
+
+                    @media (min-width: 450px) {
+                    .projects-section {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    }
+                    @media (min-width: 700px) {
+                    .projects-section {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                    }
+
+                    @media (min-width: 900px) {
+                    .projects-section {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                    }
                 button {
                         text-decoration: none;
                         position: relative;
@@ -32,51 +57,53 @@ export class MyProjects extends LitElement {
                         cursor:pointer;
                         }
 
-button:hover {
-  animation: ani 8s linear infinite;
-  border: none;
-}
+                        button:hover {
+                        animation: ani 8s linear infinite;
+                        border: none;
+                        }
 
-@keyframes ani {
-  0% {
-    background-position: 0%;
-  }
+                        @keyframes ani {
+                        0% {
+                            background-position: 0%;
+                        }
 
-  100% {
-    background-position: 400%;
-  }
-}
+                        100% {
+                            background-position: 400%;
+                        }
+                        }
 
-button:before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: -1;
-  background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
-  background-size: 400%;
-  border-radius: 35px;
-  transition: 1s;
-}
+                        button:before {
+                        content: '';
+                        position: absolute;
+                        top: -5px;
+                        left: -5px;
+                        right: -5px;
+                        bottom: -5px;
+                        z-index: -1;
+                        background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+                        background-size: 400%;
+                        border-radius: 35px;
+                        transition: 1s;
+                        }
 
-button:hover::before {
-  filter: blur(20px);
-}
+                        button:hover::before {
+                        filter: blur(20px);
+                        }
 
-button:active {
-  background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
-}
+                        button:active {
+                        background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+                        }
         `
     ];
 
     render() {
         return html`
         <i><h2>My projects</h2></i>
+        <div class="projects-section">
         <button>Burger Queen</button>
         <button>MDLinks</button>
         <button>Social Network</button>
+        </div>
         `;
     }
 }
