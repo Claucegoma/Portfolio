@@ -47,8 +47,9 @@ export class MyProjects extends LitElement {
                         font-size: 14px;
                         font-family: inherit;
                         color: #fff;
-                        width: 9em;
-                        height: 3em;
+                        width:180px;
+                        height:40px;
+                      
                         line-height: 2em;
                         text-align: center;
                         background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
@@ -96,28 +97,41 @@ export class MyProjects extends LitElement {
                         }
         `
     ];
-    mostrarVentanaEmergente() {
-        const popupWindow = document.createElement('popup-window');
+   
+    
+      mostrarVentanaEmergente(project) {
+        let popupWindow;
+    
+        // Crea una instancia de la ventana emergente específica según el proyecto
+        switch (project) {
+          case 'Burger Queen':
+            popupWindow = document.createElement('burger-queen-popup');
+            break;
+          case 'MDLinks':
+            popupWindow = document.createElement('md-links-popup');
+            break;
+          case 'Social Network':
+            popupWindow = document.createElement('social-network-popup');
+            break;
+          default:
+            popupWindow = document.createElement('popup-window');
+            break;
+        }
+    
         document.body.appendChild(popupWindow);
       }
     
-
-    render() {
+      render() {
         return html`
-        <i><h2>My projects</h2></i>
-        <div class="projects-section">
-        <button @click=${this.mostrarVentanaEmergente}>Burger Queen</button>
-       
-
-        <popup-element id="popup"></popup-element>
-        <button>MDLinks</button>
-        <button>Social Network</button>
-        </div>
+          <i><h2>My projects</h2></i>
+          <div class="projects-section">
+            <button @click=${() => this.mostrarVentanaEmergente('Burger Queen')}>Burger Queen</button>
+            <button @click=${() => this.mostrarVentanaEmergente('MDLinks')}>MDLinks</button>
+            <button @click=${() => this.mostrarVentanaEmergente('Social Network')}>Social Network</button>
+          </div>
         `;
+      }
     }
-   
     
+    customElements.define('my-projects', MyProjects);
     
-    
-}
-customElements.define('my-projects', MyProjects);

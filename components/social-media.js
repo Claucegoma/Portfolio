@@ -58,6 +58,7 @@ export class SocialMedia extends LitElement {
                         cursor: pointer;
                         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
                         transition: .6s ease;
+                        
                         }
 
                         .button-linkedin svg {
@@ -137,6 +138,7 @@ export class SocialMedia extends LitElement {
                         cursor: pointer;
                         filter: drop-shadow(0 0 10px rgba(59, 190, 230, 0.568));
                         transition: .5s linear;
+                        
                         }
 
                         .botao .mysvg {
