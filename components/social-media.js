@@ -52,6 +52,7 @@ export class SocialMedia extends LitElement {
                         text-align: center;
                         text-align: center;
                         justify-content: center;
+                        font-size:1rem;
                         align-items: center;
                         gap: 0.75rem;
                         border: none;
@@ -127,6 +128,7 @@ export class SocialMedia extends LitElement {
                         width: 125px;
                         height: 45px;
                         width:180px;
+                        font-size:1rem;
                         border-radius: 30px;
                         height:50px;
                         border: none;                   
@@ -314,7 +316,7 @@ export class SocialMedia extends LitElement {
         window.location.href = 'https://github.com/Claucegoma';
       }
       downloadCV() {
-        const cvUrl = './cv.pdf';
+        const cvUrl = './assets/cv.pdf';
         const link = document.createElement('a');
         link.href = cvUrl;
         link.download = 'cv.pdf';

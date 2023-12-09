@@ -44,7 +44,7 @@ export class MyProjects extends LitElement {
                         text-decoration: none;
                         position: relative;
                         border: none;
-                        font-size: 14px;
+                        font-size:1.2rem;
                         font-family: inherit;
                         color: #fff;
                         width:180px;
@@ -126,7 +126,7 @@ export class MyProjects extends LitElement {
           <i><h2>My projects</h2></i>
           <div class="projects-section">
             <button @click=${() => this.mostrarVentanaEmergente('Burger Queen')}>Burger Queen</button>
-            <button @click=${() => this.mostrarVentanaEmergente('MDLinks')}>MDLinks</button>
+            <button @click=${() => this.mostrarVentanaEmergente('MDLinks')}>MD Links</button>
             <button @click=${() => this.mostrarVentanaEmergente('Social Network')}>Social Network</button>
           </div>
         `;

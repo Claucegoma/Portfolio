@@ -70,8 +70,9 @@ class PopupWindow extends LitElement {
               background-size: 300%;
               border-radius: 30px;
               z-index: 1;
-              width: 9.5em;
+              width: 9.7em;
               height: 3em;
+            
               position: relative;
               cursor:pointer;
             }
@@ -127,6 +128,11 @@ class PopupWindow extends LitElement {
               .links-container {
               gap: 50px;
             }
+            .logo{
+              width:40px;
+              height:40px;
+            }
+            
             }  
             @media screen and (max-width: 400px) {
              
@@ -147,7 +153,7 @@ class PopupWindow extends LitElement {
             .bcolor1 { 
               width: 5.5em;
               height: 2em;
-             
+            
             }
            }  
   `;
@@ -235,10 +241,10 @@ class BurgerQueenPopup extends PopupWindow {
       label2: "App Link",
       icons: [
         "./assets/icon-react-native.png",
-        "./assets/icon-javascript.png",
-        "./assets/icons8-css-48.png",
-       "./assets/icons8-html-48.png", 
         "./assets/icons-bootstrap.png", 
+        "./assets/icon-javascript.png",
+       "./assets/icons8-html-48.png", 
+       "./assets/icons8-css-48.png",
        "./assets/icon-vite.png", 
        "./assets/icons-node-js.png",
        "./assets/icons-jest.png" 
@@ -256,7 +262,7 @@ class MdlinksPopup extends PopupWindow {
 
   constructor() {
     super();
-    this.title = 'Markdown links';
+    this.title = 'Markdown links library';
     this.content = {
       image: "./assets/mdlinks.png",
       link1: "https://github.com/Claucegoma/DEV008-md-links",
@@ -265,8 +271,8 @@ class MdlinksPopup extends PopupWindow {
       label2: "App Link",
       icons: [
         "./assets/icon-javascript.png",
+        "./assets/icons8-html-48.png", 
         "./assets/icons8-css-48.png",
-       "./assets/icons8-html-48.png", 
        "./assets/icons-node-js.png",
        "./assets/icons-jest.png" ,
        "./assets/axios.png" ,
@@ -295,11 +301,12 @@ class SocialNetworkPopup extends PopupWindow {
       label2: "App Link",
       icons: [
         "./assets/icon-javascript.png",
-        "./assets/icons8-css-48.png",
        "./assets/icons8-html-48.png", 
+       "./assets/icons8-css-48.png",
        "./assets/icon-vite.png", 
        "./assets/icons-node-js.png",
        "./assets/icons-jest.png" ,
+       "./assets/icons8-firebase-48.png" ,
        "./assets/icon-babel.png"
       ],
     };
