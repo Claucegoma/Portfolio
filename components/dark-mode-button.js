@@ -9,8 +9,8 @@ class DarkModeButton extends LitElement {
       cursor: pointer;
       border-radius: 50px;
       border: 0;
-      margin: 20px; 
-      align-self: center; 
+      margin: 20px;
+      align-self: center;
     }
 
     button:hover {
@@ -18,48 +18,39 @@ class DarkModeButton extends LitElement {
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
     }
 
-  
-   
     @media screen and (min-width: 500px) {
       button {
-        margin-left: 200px; 
-     
+        margin-left: 90px;
       }
     }
-    
-    @media screen and (min-width: 710px) {
+
+    @media screen and (min-width: 700px) {
       button {
-        margin-left: 400px; 
-     
+        margin-left: 200px;
       }
     }
-    
-    @media screen and (min-width: 820px) {
+
+    @media screen and (min-width: 790px) {
       button {
-        margin-left: 500px; 
-     
+        margin-left: 300px;
       }
     }
 
     @media screen and (min-width: 900px) {
       button {
-        margin-left: 500px; 
-     
+        margin-left: 400px;
       }
     }
     @media screen and (min-width: 1000px) {
       button {
-        margin-left: 700px; 
-     
+        margin-left: 500px;
       }
     }
     @media screen and (min-width: 1100px) {
       button {
-        margin-left: 850px; 
-     
+        margin-left: 800px;
       }
     }
-
   `;
 
   static properties = {
@@ -72,7 +63,9 @@ class DarkModeButton extends LitElement {
   }
 
   render() {
-    return html`<button @click=${this.toggleDarkMode}>${this.darkMode ? '🌛' : '🌞'}</button>`;
+    return html`<button @click=${this.toggleDarkMode}>
+      ${this.darkMode ? '🌛' : '🌞'}
+    </button>`;
   }
 
   toggleDarkMode() {
@@ -83,4 +76,3 @@ class DarkModeButton extends LitElement {
 }
 
 customElements.define('dark-mode-button', DarkModeButton);
-
