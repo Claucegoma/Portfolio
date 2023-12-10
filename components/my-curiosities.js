@@ -121,12 +121,12 @@ export class Mycuriosities extends LitElement {
         flex-wrap: wrap;
       }
 
-      @media (min-width: 650px) {
+      @media (min-width: 660px) {
         .card-section {
           grid-template-columns: repeat(2, 1fr);
         }
       }
-      @media (min-width: 980px) {
+      @media (min-width: 1000px) {
         .card-section {
           grid-template-columns: repeat(3, 1fr);
         }
@@ -186,7 +186,7 @@ export class Mycuriosities extends LitElement {
         <div class="card">
           <p>
             I also love to dance; <br />I see dance as speaking a different
-            language too <br />
+            languages too <br />
             💃🎵
           </p>
           <ul>

@@ -12,7 +12,8 @@ At this portfolio you´ll find the next sections:
 
 ## Technologies:
 
-![Lit](./assets/lit.png){: width="50px" height="50px"}
+<img src="./assets/lit.png" alt="Lit" style="height: 50px; width: 50px;">
+
 ![JavaScript](./assets/icon-javascript.png)
 ![HTML 5](./assets/icons8-html-48.png)
 ![CSS 3](./assets/icons8-css-48.png)

@@ -35,7 +35,7 @@ header {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 550px) {
   header h2 {
     font-size: 1.4rem;
     white-space: wrap;

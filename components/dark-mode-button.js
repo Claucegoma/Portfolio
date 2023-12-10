@@ -20,11 +20,11 @@ class DarkModeButton extends LitElement {
 
     @media screen and (min-width: 500px) {
       button {
-        margin-left: 90px;
+        margin-left: 70px;
       }
     }
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 650px) {
       button {
         margin-left: 200px;
       }
