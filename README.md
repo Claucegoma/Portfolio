@@ -11,16 +11,15 @@ At this portfolio you´ll find the next sections:
 * Curiosities
 
 ## Technologies:
-
+<div style= "display:flex;">
 <img src="./assets/lit.png" alt="Lit" style="height: 50px; width: 50px;">
-
-![JavaScript](./assets/icon-javascript.png)
-![HTML 5](./assets/icons8-html-48.png)
-![CSS 3](./assets/icons8-css-48.png)
-![Node JS](./assets/icons-node-js.png)
-![Vite](./assets/icon-vite.png)
-![Jest](./assets/icons-jest.png)
-
+<img src="./assets/icon-javascript.png" alt="JavaScript" style="height: 50px; width: 50px;">
+<img src="./assets/icons8-html-48.png" alt="HTML 5" style="height: 50px; width: 50px;">
+<img src="./assets/icons8-css-48.png" alt="CSS 3" style="height: 50px; width: 50px;">
+<img src="./assets/icons-node-js.png" alt="Node JS" style="height: 50px; width: 50px;">
+<img src="./assets/icon-vite.png" alt="Vite" style="height: 50px; width: 50px;">
+<img src="./assets/icons-jest.png" alt="Jest" style="height: 50px; width: 50px;">
+</div>
 
 
 😺🐈💛💛🐈😺

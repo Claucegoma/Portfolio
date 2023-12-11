@@ -278,8 +278,204 @@ export class SocialMedia extends LitElement {
       .svgIcon path {
         fill: white;
       }
+
+      .info-button {
+        color: #dbac13;
+        padding: 5px;
+        cursor: pointer;
+        outline: none;
+        font-size: 12.5px;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        background: none;
+        border-image: linear-gradient(
+            115deg,
+            #075a76,
+            #ab8712,
+            #a767e5,
+            #00a9e1
+          )
+          1;
+        border-image-slice: 1;
+        transition: border-image 0.3s ease;
+        animation: border-animation 5s linear infinite;
+      }
+
+      @keyframes border-animation {
+        0% {
+          border-image-source: linear-gradient(
+            115deg,
+            #075a76,
+            #ab8712,
+            #a767e5,
+            #00a9e1
+          );
+        }
+        25% {
+          border-image-source: linear-gradient(
+            115deg,
+            #00a9e1,
+            #d4af37,
+            #075a76,
+            #ab8712,
+            #a767e5
+          );
+        }
+        50% {
+          border-image-source: linear-gradient(
+            115deg,
+            #a767e5,
+            #00a9e1,
+            #d4af37,
+            #075a76,
+            #ab8712
+          );
+        }
+        75% {
+          border-image-source: linear-gradient(
+            115deg,
+            #ab8712,
+            #a767e5,
+            #00a9e1,
+            #d4af37,
+            #075a76
+          );
+        }
+        100% {
+          border-image-source: linear-gradient(
+            115deg,
+            #075a76,
+            #ab8712,
+            #a767e5,
+            #00a9e1,
+            #d4af37
+          );
+        }
+      }
+      .info-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .info-container {
+        display: none;
+
+        border-width: 2px;
+        border-style: solid;
+        border-image: linear-gradient(
+            115deg,
+            #075a76,
+            #ab8712,
+            #a767e5,
+            #00a9e1
+          )
+          1;
+        border-image-slice: 1;
+        transition: border-image 0.3s ease;
+        animation: border-animation 5s linear infinite;
+        padding: 10px; /* Ajusta el relleno según tus necesidades */
+      }
+
+      @keyframes border-animation {
+        0% {
+          border-image-source: linear-gradient(
+            115deg,
+            #075a76,
+            #ab8712,
+            #a767e5,
+            #00a9e1
+          );
+        }
+        25% {
+          border-image-source: linear-gradient(
+            115deg,
+            #00a9e1,
+            #d4af37,
+            #075a76,
+            #ab8712,
+            #a767e5
+          );
+        }
+        50% {
+          border-image-source: linear-gradient(
+            115deg,
+            #a767e5,
+            #00a9e1,
+            #d4af37,
+            #075a76,
+            #ab8712
+          );
+        }
+        75% {
+          border-image-source: linear-gradient(
+            115deg,
+            #ab8712,
+            #a767e5,
+            #00a9e1,
+            #d4af37,
+            #075a76
+          );
+        }
+        100% {
+          border-image-source: linear-gradient(
+            115deg,
+            #075a76,
+            #ab8712,
+            #a767e5,
+            #00a9e1,
+            #d4af37
+          );
+        }
+      }
+
+      .show-info {
+        display: block;
+      }
     `,
   ];
+
+  openMail() {
+    const destinatary = 'arzagitana@ciencias.unam.mx';
+    const asunto = '¡Hello!';
+    const body =
+      'I have reviewed your portfolio and would like to get in touch with you';
+
+    const mailtoLink = `mailto:${destinatary}?subject=${encodeURIComponent(
+      asunto
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+  }
+
+  mostrarInfo() {
+    const infoContainer = this.shadowRoot.querySelector('.info-container');
+    infoContainer.classList.toggle('show-info');
+  }
+  connectedCallback() {
+    super.connectedCallback();
+    document.body.addEventListener(
+      'click',
+      this.cerrarVentanaSiEsExterior,
+      true
+    );
+  }
+
+  cerrarVentanaSiEsExterior = (event) => {
+    const infoContainer = this.shadowRoot.querySelector('.info-container');
+    const infoButton = this.shadowRoot.querySelector('.info-button');
+
+    if (
+      !infoContainer.contains(event.target) &&
+      !infoButton.contains(event.target)
+    ) {
+      infoContainer.classList.remove('show-info');
+    }
+  };
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    document.body.removeEventListener('click', this.cerrarVentanaSiEsExterior);
+  }
 
   render() {
     return html`
@@ -356,19 +552,36 @@ export class SocialMedia extends LitElement {
           </svg>
           <span class="texto">Download my CV</span>
         </button>
-
-        <button class="button">
-          <div class="display">
-            <div id="msg">
-              <svg class="svgIcon" viewBox="0 0 512 512" height="1.2em">
-                <path
-                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-                ></path>
-              </svg>
-              Send me an email
+        <div>
+          <button class="button" @click=${this.openMail}>
+            <div class="display">
+              <div id="msg">
+                <svg class="svgIcon" viewBox="0 0 512 512" height="1.2em">
+                  <path
+                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                  ></path>
+                </svg>
+                Send me an email
+              </div>
             </div>
+          </button>
+          <button class="info-button" @click=${this.mostrarInfo}>?</button>
+
+          <div class="info-container">
+            <p>
+              If clicking the button doesn't open your email client, please
+              follow these steps:
+            </p>
+            <ol>
+              <li>Open your email client.</li>
+              <li>
+                Copy and paste the email address:<br />
+                <br />
+                <strong>${'arzagitana@ciencias.unam.mx'}</strong>
+              </li>
+            </ol>
           </div>
-        </button>
+        </div>
       </div>
     `;
   }
