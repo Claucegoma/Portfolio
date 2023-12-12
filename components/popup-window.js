@@ -267,11 +267,10 @@ class MdlinksPopup extends PopupWindow {
       label2: 'App Link',
       icons: [
         './assets/icon-javascript.png',
-        './assets/icons8-html-48.png',
-        './assets/icons8-css-48.png',
         './assets/icons-node-js.png',
-        './assets/icons-jest.png',
         './assets/axios.png',
+        './assets/icons-jest.png',
+        './assets/yargs.png'
       ],
     };
   }

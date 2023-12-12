@@ -434,6 +434,23 @@ export class SocialMedia extends LitElement {
     `,
   ];
 
+  redirectToLinkedIn() {
+    window.location.href =
+      'https://www.linkedin.com/in/ceciliagonzalezmariblanca777/';
+  }
+
+  redirectToGithub() {
+    window.location.href = 'https://github.com/Claucegoma';
+  }
+
+  downloadCV() {
+    const cvUrl = './assets/cv.pdf';
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'cv.pdf';
+    link.click();
+  }
+
   openMail() {
     const destinatary = 'arzagitana@ciencias.unam.mx';
     const asunto = '¡Hello!';
@@ -451,6 +468,7 @@ export class SocialMedia extends LitElement {
     const infoContainer = this.shadowRoot.querySelector('.info-container');
     infoContainer.classList.toggle('show-info');
   }
+
   connectedCallback() {
     super.connectedCallback();
     document.body.addEventListener(
@@ -459,7 +477,6 @@ export class SocialMedia extends LitElement {
       true
     );
   }
-
   cerrarVentanaSiEsExterior = (event) => {
     const infoContainer = this.shadowRoot.querySelector('.info-container');
     const infoButton = this.shadowRoot.querySelector('.info-button');
@@ -471,12 +488,12 @@ export class SocialMedia extends LitElement {
       infoContainer.classList.remove('show-info');
     }
   };
-
   disconnectedCallback() {
     super.disconnectedCallback();
     document.body.removeEventListener('click', this.cerrarVentanaSiEsExterior);
   }
 
+  
   render() {
     return html`
       <i><h2>Social media</h2></i>
@@ -585,19 +602,6 @@ export class SocialMedia extends LitElement {
       </div>
     `;
   }
-  redirectToLinkedIn() {
-    window.location.href =
-      'https://www.linkedin.com/in/ceciliagonzalezmariblanca777/';
-  }
-  redirectToGithub() {
-    window.location.href = 'https://github.com/Claucegoma';
-  }
-  downloadCV() {
-    const cvUrl = './assets/cv.pdf';
-    const link = document.createElement('a');
-    link.href = cvUrl;
-    link.download = 'cv.pdf';
-    link.click();
-  }
+ 
 }
 customElements.define('social-media', SocialMedia);

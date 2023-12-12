@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import './popoup-window';
+import './popup-window';
 
 export class MyProjects extends LitElement {
   static styles = [

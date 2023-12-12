@@ -181,7 +181,7 @@ class RotatingCardsSection extends LitElement {
                 <li>Responsibility</li>
                 <li>Punctuality</li>
                 <li>Self-Learning</li>
-                <li>Effective Communication</li>
+                <li>Effective communication</li>
                 <li>Ethic</li>
               </ul>
             </div>
@@ -215,8 +215,8 @@ class RotatingCardsSection extends LitElement {
                 <li>Github</li>
                 <li>Firebase</li>
                 <li>NPM/YARN</li>
-                <li>Trello</li>
                 <li>Vite</li>
+                <li>Trello</li>
                 <li>Figma</li>
               </ul>
             </div>
