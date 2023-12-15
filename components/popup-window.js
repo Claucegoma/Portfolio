@@ -232,21 +232,21 @@ class BurgerQueenPopup extends PopupWindow {
     super();
     this.title = 'Burger queen Api client';
     this.content = {
-      image: 'public/assets/bqac.png',
+      image: '/public/assets/bqac.png',
       link1:
         'https://github.com/Claucegoma/DEV009-burger-queen-api-client/compare/main...AKMoralesRamos:DEV009-burger-queen-api-client:main',
       label1: 'GitHub repository',
       link2: 'https://dev-009-burger-queen-api-client-indol.vercel.app/',
       label2: 'App Link',
       icons: [
-        'public/assets/icon-react-native.png',
-        'public/assets/icons-bootstrap.png',
-        'public/assets/icon-javascript.png',
-        'public/assets/icons8-html-48.png',
-        'public/assets/icons8-css-48.png',
-        'public/assets/icon-vite.png',
-        'public/assets/icons-node-js.png',
-        'public/assets/icons-jest.png',
+        '/public/assets/icon-react-native.png',
+        '/public/assets/icons-bootstrap.png',
+        '/public/assets/icon-javascript.png',
+        '/public/assets/icons8-html-48.png',
+        '/public/assets/icons8-css-48.png',
+        '/public/assets/icon-vite.png',
+        '/public/assets/icons-node-js.png',
+        '/public/assets/icons-jest.png',
       ],
     };
   }
@@ -260,17 +260,17 @@ class MdlinksPopup extends PopupWindow {
     super();
     this.title = 'Markdown links library';
     this.content = {
-      image: 'public/assets/mdlinks.png',
+      image: '/public/assets/mdlinks.png',
       link1: 'https://github.com/Claucegoma/DEV008-md-links',
       label1: 'GitHub repository',
       link2: 'https://www.npmjs.com/package/cecy-md-links?activeTab=readme',
       label2: 'App Link',
       icons: [
-        'public/assets/icon-javascript.png',
-        'public/assets/icons-node-js.png',
-        'public/assets/axios.png',
-        'public/assets/icons-jest.png',
-        'public/assets/yargs.png'
+        '/public/assets/icon-javascript.png',
+        '/public/assets/icons-node-js.png',
+        '/public/assets/axios.png',
+        '/public/assets/icons-jest.png',
+        '/public/assets/yargs.png'
       ],
     };
   }
@@ -285,20 +285,20 @@ class SocialNetworkPopup extends PopupWindow {
     super();
     this.title = 'Social network / CatsSociety';
     this.content = {
-      image: 'public/assets/catsSociety.png',
+      image: '/public/assets/catsSociety.png',
       link1: 'https://github.com/Claucegoma/DEV008-social-network',
       label1: 'GitHub repository',
       link2: 'https://dev-008-social-network-nqirb9y8e-claucegoma.vercel.app/',
       label2: 'App Link',
       icons: [
-        'public/assets/icon-javascript.png',
-        'public/assets/icons8-html-48.png',
-        'public/assets/icons8-css-48.png',
-        'public/assets/icon-vite.png',
-        'public/assets/icons-node-js.png',
-        'public/assets/icons-jest.png',
-        'public/assets/icons8-firebase-48.png',
-        'public/assets/icon-babel.png',
+        '/public/assets/icon-javascript.png',
+        '/public/assets/icons8-html-48.png',
+        '/public/assets/icons8-css-48.png',
+        '/public/assets/icon-vite.png',
+        '/public/assets/icons-node-js.png',
+        '/public/assets/icons-jest.png',
+        '/public/assets/icons8-firebase-48.png',
+        '/public/assets/icon-babel.png',
       ],
     };
   }
