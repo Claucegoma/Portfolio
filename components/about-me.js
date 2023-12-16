@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import imagePaths from './imagePaths';
 
 export class AboutMe extends LitElement {
     static styles = [
@@ -76,7 +77,7 @@ export class AboutMe extends LitElement {
             motivates and excites me, i put my mind and heart into it, and that has
             always been my formula for success.
         </p>
-        <img src= "/public/assets/yo-removebg-preview.png" alt ="" />
+        <img src="${imagePaths.me}" alt="" />
         
         </div>
 
