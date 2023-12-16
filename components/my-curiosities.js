@@ -145,7 +145,7 @@ export class Mycuriosities extends LitElement {
       <i><h2>Curiosities</h2></i>
       <div class="card-section">
         <div class="card">
-          <img src="/public/assets/meow.png" alt="" />
+          <img src="./public/assets/meow.png" alt="" />
           <p>
             As you can imagine, I am a true cat lover.
             <br />
@@ -162,11 +162,11 @@ export class Mycuriosities extends LitElement {
             By now i could use at least three.
           </p>
           <ul>
-            <img class="icon" src="/public/assets/icon-spain.png" alt="" />
+            <img class="icon" src="./public/assets/icon-spain.png" alt="" />
             <li>Spanish-native</li>
-            <img class="icon" src="/public/assets/icon-uk.png" alt="" />
+            <img class="icon" src="./public/assets/icon-uk.png" alt="" />
             <li>English-intermediate</li>
-            <img class="icon" src="/public/assets/icon-italy.png" alt="" />
+            <img class="icon" src="./public/assets/icon-italy.png" alt="" />
             <li>Italian-basic</li>
           </ul>
         </div>
@@ -174,8 +174,8 @@ export class Mycuriosities extends LitElement {
         <div class="card">
           <div class="ali-certi">
             <p>Courses and certifications</p>
-            <img class="certi" src="/public/assets/labo.png" alt="" />
-            <img class="certi" src="/public/assets/certiprof.png" alt="" />
+            <img class="certi" src="./public/assets/labo.png" alt="" />
+            <img class="certi" src="./public/assets/certiprof.png" alt="" />
           </div>
           <ul>
             <li>Front-End developer-Laboratoria</li>
