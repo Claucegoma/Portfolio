@@ -152,7 +152,7 @@ class RotatingCardsSection extends LitElement {
           <div class="card-inner">
             <div class="card-face">
               Tech skills
-              <img class="image" src="./public/assets/tech-skills.png" alt="" />
+              <img class="image" src="/assets/tech-skills.png" alt="" />
             </div>
             <div class="card-face-back">
               <ul>
@@ -170,7 +170,7 @@ class RotatingCardsSection extends LitElement {
           <div class="card-inner">
             <div class="card-face">
               Soft skills
-              <img class="image" src="./public/assets/team-work.png" alt="" />
+              <img class="image" src="/assets/team-work.png" alt="" />
             </div>
             <div class="card-face-back">
               <ul>
@@ -191,7 +191,7 @@ class RotatingCardsSection extends LitElement {
           <div class="card-inner">
             <div class="card-face">
               Frameworks
-              <img class="image" src="./public/assets/frameworks.png" alt="" />
+              <img class="image" src="/assets/frameworks.png" alt="" />
             </div>
             <div class="card-face-back">
               <ul>
@@ -207,7 +207,7 @@ class RotatingCardsSection extends LitElement {
           <div class="card-inner">
             <div class="card-face">
               Tools
-              <img class="image" src="./public/assets/tools.png" alt="" />
+              <img class="image" src="/assets/tools.png" alt="" />
             </div>
             <div class="card-face-back">
               <ul>

@@ -444,7 +444,7 @@ export class SocialMedia extends LitElement {
   }
 
   downloadCV() {
-    const cvUrl = './assets/cv.pdf';
+    const cvUrl = '/assets/cv-dec-english.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
     link.download = 'cv.pdf';

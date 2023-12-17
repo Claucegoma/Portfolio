@@ -1,10 +1,10 @@
-// vite.config.js
-export default {
-   
-    base: '/',
-    assetsDir: 'assets',
-    build: {
-      assetsInlineLimit: 0,
-    },
-  };
-  
+import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
+import { ViteAliases } from 'vite-aliases'
+
+export default defineConfig({
+  plugins: [
+    VitePWA(),
+    ViteAliases(),
+  ],
+})
