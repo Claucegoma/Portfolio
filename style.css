@@ -29,19 +29,6 @@ header {
   align-items: center;
   box-sizing: border-box;
 }
-@media screen and (max-width: 570px) {
-  header {
-    height: 110px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  header h2 {
-    font-size: 1.4rem;
-    white-space: wrap;
-  }
-}
-
 header img {
   display: flex;
   width: 104px;
@@ -49,4 +36,25 @@ header img {
   margin: 0%;
   margin-right: 4px;
   margin-top: 15px;
+}
+@media screen and (max-width: 400px) {
+  header h2 {
+    font-size: 1.2rem;
+    white-space: wrap; 
+  }
+}
+@media screen and (max-width: 500px) {
+  header h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  header h2 {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 570px) {
+  header {
+    height: 110px;
+  }
 }

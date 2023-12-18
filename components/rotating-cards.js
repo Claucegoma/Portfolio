@@ -19,9 +19,48 @@ class RotatingCardsSection extends LitElement {
       justify-content: center;
     }
 
+    @media (max-width: 320px) {
+      h2 {
+        font-size: 2rem;
+      }
+      .image {
+        height: 150px;
+        width: 170px;
+      }
+      .card {
+        width: 220px;
+        height: 290px;
+        margin: 5px;
+      }
+      .card-face,
+      .card-face-back {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (min-width: 321px) {
+      .card {
+        width: 250px;
+        height: 330px;
+      }
+      .image {
+        height: 170px;
+        width: 200px;
+      }
+
+      .card-face,
+      .card-face-back {
+        font-size: 1.5rem;
+      }
+    }
+
     @media (min-width: 550px) {
       .card-section {
         grid-template-columns: repeat(2, 1fr);
+      }
+      .card {
+        width: 250px;
+        height: 330px;
       }
     }
     @media (min-width: 900px) {
@@ -38,8 +77,8 @@ class RotatingCardsSection extends LitElement {
 
     .card {
       position: relative;
-      width: 250px;
-      height: 330px;
+      /*  width: 250px;
+      height: 330px;*/
       margin: 10px;
       perspective: 1000px;
     }
@@ -66,9 +105,9 @@ class RotatingCardsSection extends LitElement {
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
-      font-size: 1.5rem;
+
       border-radius: 20px;
-      border: 7px solid transparent; 
+      border: 7px solid transparent;
       border-image: linear-gradient(115deg, #075a76, #ab8712, #a767e5, #00a9e1);
       border-image-slice: 1;
       animation: border-animation 5s linear infinite;
@@ -136,11 +175,7 @@ class RotatingCardsSection extends LitElement {
     }
 
     li {
-      margin-bottom: 6px; 
-    }
-    .image {
-      height: 170px;
-      width: 200px;
+      margin-bottom: 6px;
     }
   `;
 

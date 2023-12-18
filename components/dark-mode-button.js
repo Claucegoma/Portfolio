@@ -7,9 +7,8 @@ class DarkModeButton extends LitElement {
       color: #fff;
       padding: 8px 16px;
       cursor: pointer;
-      border-radius: 50px;
+      border-radius: 70px;
       border: 0;
-      margin: 20px;
       align-self: center;
     }
 
@@ -17,14 +16,27 @@ class DarkModeButton extends LitElement {
       transform: translateY(-3px);
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
     }
-
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 320px) {
       button {
-        margin-left: 70px;
+        margin: 2px;
       }
     }
 
-    @media screen and (min-width: 650px) {
+    @media screen and (min-width: 400px) {
+      button {
+        margin-left: 100px;
+        margin: 20px;
+      }
+    }
+    
+    @media screen and (min-width: 500px) {
+      button {
+        margin-left: 120px;
+     
+      }
+    }
+
+    @media screen and (min-width: 659px) {
       button {
         margin-left: 200px;
       }
@@ -36,7 +48,7 @@ class DarkModeButton extends LitElement {
       }
     }
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 850px) {
       button {
         margin-left: 400px;
       }

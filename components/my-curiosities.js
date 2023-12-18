@@ -120,6 +120,29 @@ export class Mycuriosities extends LitElement {
         flex-direction: column;
         flex-wrap: wrap;
       }
+      @media (max-width: 320px) {
+            h2 {
+          font-size: 2rem;
+        }
+        .card {
+          width: 240px;
+          height: 250px;
+        }
+        p {
+          font-size: 1rem;
+        }
+        li {
+          font-size: 1.1rem;
+        }
+        .img {
+          height: 20px;
+          width: auto;
+        }
+        .certi {
+          height: 40px;
+          width: 70px;
+        }
+      }
 
       @media (min-width: 660px) {
         .card-section {

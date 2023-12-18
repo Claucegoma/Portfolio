@@ -45,8 +45,17 @@ export class AboutMe extends LitElement {
                 }
 
                 p {
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                 
+                }
+                @media (max-width: 320px) {
+                    h1 {
+                    font-size: 2.5rem;
+                }
+                    p {
+                    font-size: 1.2rem;
+                
+                }
                 }
                 @media screen and (min-width: 300px) {
                  .content {

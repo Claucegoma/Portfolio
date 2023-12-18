@@ -20,6 +20,12 @@ export class SocialMedia extends LitElement {
         padding: 40px;
       }
 
+      @media (max-width: 320px) {
+            h2 {
+          font-size: 2rem;
+        }
+      }
+
       @media (min-width: 450px) {
         .media-section {
           grid-template-columns: repeat(2, 1fr);

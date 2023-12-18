@@ -20,6 +20,11 @@ export class MyProjects extends LitElement {
         justify-content: center;
         padding: 40px;
       }
+      @media (max-width: 320px) {
+            h2 {
+          font-size: 2rem;
+        }
+      }
 
       @media (min-width: 450px) {
         .projects-section {
